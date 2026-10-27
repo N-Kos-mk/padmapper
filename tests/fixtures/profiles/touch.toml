@@ -1,0 +1,14 @@
+# テスト用: 押すたびに切り替わるレイヤーを持つプロファイル
+inherit = "base"
+description = "タッチモード"
+match = ["touchapp.exe"]
+
+[buttons]
+LS = "layer_toggle:touch"
+
+[layers.touch.sticks.right]
+mode = "mouse"
+speed = 700
+
+[layers.touch.buttons]
+RT = "mouse:left"

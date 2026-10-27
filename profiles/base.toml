@@ -1,0 +1,16 @@
+# 全プロファイル共通の設定。他のプロファイルは inherit = "base" でこれを引き継ぐ
+description = "共通設定"
+
+[settings]
+trigger_threshold = 0.3   # LT/RT をボタンとみなす押し込み量 (0〜1)
+repeat_delay = 0.4        # repeat = true の割り当てが連続入力を始めるまでの秒数
+repeat_rate = 20          # 連続入力の回数 / 秒
+scroll_step = 30          # スクロールを送る単位 (120 = ホイール 1 ノッチ)
+
+[sticks.left]
+deadzone = 0.15
+curve = 2.0               # 大きいほど、少し倒したときに細かく動く
+
+[sticks.right]
+deadzone = 0.15
+curve = 2.0

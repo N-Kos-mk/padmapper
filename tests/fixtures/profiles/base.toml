@@ -1,0 +1,16 @@
+# テスト用: 共通設定
+description = "共通設定"
+
+[settings]
+trigger_threshold = 0.3
+repeat_delay = 0.4
+repeat_rate = 20
+scroll_step = 30
+
+[sticks.left]
+deadzone = 0.15
+curve = 2.0
+
+[sticks.right]
+deadzone = 0.15
+curve = 2.0

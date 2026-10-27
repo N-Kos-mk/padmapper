@@ -1,0 +1,14 @@
+# プロファイルと全体設定 (各自の環境・アプリに合わせた設定)。共通設定の base.toml だけは追跡する
+/profiles/*
+!/profiles/base.toml
+/config.toml
+
+# 実行中に作られるもの
+/ui-profile/
+/backup/
+/logs/
+*.tmp
+
+# Python
+__pycache__/
+*.pyc

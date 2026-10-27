@@ -1,0 +1,4 @@
+# テスト用: パスで切り替わる、何も送らないプロファイル
+inherit = "base"
+description = "何も送らない"
+match = ["*/steamapps/common/*"]

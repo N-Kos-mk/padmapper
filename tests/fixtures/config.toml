@@ -1,0 +1,9 @@
+# テスト用の全体設定
+default_profile = "desktop"
+pad = -1
+poll_hz = 500
+focus_interval = 0.2
+mouse_mode = "cursor"
+start_enabled = true
+toggle_combo = ["BACK", "START"]
+toggle_hold = 1.0

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>padmapper 設定</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"
+          integrity="sha384-hJnF5AwidE18GSWTAGHv3ByzzvfNZ1Tcx5y1UUV3WkauuMCEzBJBMSwSt/PUPXnM"
+          crossorigin="anonymous" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><img src="/favicon.ico" alt="" width="22" height="22">padmapper</div>
+    <div class="status">
+      <span class="chip" id="st-conn"><i data-lucide="gamepad-2"></i><span>確認中</span></span>
+      <span class="chip" id="st-profile"><i data-lucide="layers"></i><span>-</span></span>
+      <span class="chip subtle" id="st-fg"><i data-lucide="app-window"></i><span>-</span></span>
+      <span class="chip subtle" id="st-suspend" hidden><i data-lucide="pause"></i><span>この画面が前面の間は変換を止めています</span></span>
+    </div>
+    <label class="switch" title="Back + Start の長押しでも切り替えられます">
+      <input type="checkbox" id="enabled">
+      <span class="track"><span class="thumb"></span></span>
+      <span id="enabled-label">変換</span>
+    </label>
+  </header>
+
+  <div class="offline" id="offline" hidden>
+    <i data-lucide="circle-alert"></i>padmapper に接続できません。終了した可能性があります。トレイアイコンから設定画面を開き直してください。
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="side-head">
+        <h2>プロファイル</h2>
+        <button class="btn small" data-action="new-profile"><i data-lucide="plus"></i>新規</button>
+      </div>
+      <ul class="profile-list" id="profile-list"></ul>
+      <div class="side-foot">
+        <button class="side-link" data-action="global"><i data-lucide="settings"></i>全体設定</button>
+        <button class="side-link" data-action="logs"><i data-lucide="scroll-text"></i>ログ</button>
+      </div>
+    </aside>
+    <main class="main" id="main"><div class="empty">読み込み中…</div></main>
+  </div>
+
+  <dialog class="dialog" id="dialog"></dialog>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>

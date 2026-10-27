@@ -1,0 +1,11 @@
+# テスト用: 実行ファイル名で切り替わるプロファイル
+inherit = "base"
+description = "エミュレーター"
+match = ["emu.exe"]
+
+[sticks.right]
+mode = "mouse"
+speed = 700
+
+[buttons]
+RT = "mouse:left"

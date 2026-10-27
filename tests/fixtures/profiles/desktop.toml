@@ -1,0 +1,27 @@
+# テスト用: デスクトップ操作 (既定のプロファイル)
+inherit = "base"
+description = "デスクトップ操作"
+
+[sticks.left]
+mode = "mouse"
+speed = 1400
+
+[sticks.right]
+mode = "scroll"
+speed = 12
+axis_lock = true
+
+[buttons]
+A = "mouse:left"
+B = "mouse:right"
+X = "key:enter"
+Y = "key:esc"
+RT = "mouse:left"
+LT = "layer:fn"
+UP = { do = "key:up", repeat = true }
+
+[layers.fn.buttons]
+X = "key:ctrl+c"
+
+[layers.fn.sticks.left]
+speed = 350

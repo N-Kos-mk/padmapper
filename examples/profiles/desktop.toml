@@ -1,0 +1,45 @@
+# デスクトップ操作のプロファイル (サンプル)。初回起動時にコピーされる
+inherit = "base"
+description = "デスクトップ操作。左スティックでカーソル、右スティックでスクロール、LT を押しながらで別機能"
+
+[sticks.left]
+mode = "mouse"
+speed = 1400              # 最大まで倒したときの速さ (ピクセル / 秒)
+
+[sticks.right]
+mode = "scroll"
+speed = 12                # ノッチ / 秒
+axis_lock = true          # 縦横のうち強いほうだけスクロールする
+
+[buttons]
+A = "mouse:left"
+B = "mouse:right"
+X = "key:enter"
+Y = "key:esc"
+LB = "key:alt+left"       # 戻る
+RB = "key:alt+right"      # 進む
+RT = "mouse:left"         # 押したままドラッグしやすいように A と同じ
+LT = "layer:fn"
+UP = { do = "key:up", repeat = true }
+DOWN = { do = "key:down", repeat = true }
+LEFT = { do = "key:left", repeat = true }
+RIGHT = { do = "key:right", repeat = true }
+# BACK + START の長押しは変換の有効/無効の切り替えに使うので、単独では割り当てない
+
+# LT を押している間だけ有効な割り当て
+[layers.fn.buttons]
+A = "key:media_play_pause"
+B = { do = "key:ctrl+z", repeat = true }
+X = "key:ctrl+c"
+Y = "key:ctrl+v"
+LB = "key:ctrl+shift+tab" # 前のタブ
+RB = "key:ctrl+tab"       # 次のタブ
+UP = { do = "key:volume_up", repeat = true }
+DOWN = { do = "key:volume_down", repeat = true }
+LEFT = "key:media_prev"
+RIGHT = "key:media_next"
+START = "key:win"
+BACK = "key:win+tab"
+
+[layers.fn.sticks.left]
+speed = 350               # LT を押している間はカーソルをゆっくり動かす

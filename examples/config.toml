@@ -1,0 +1,10 @@
+# padmapper の全体設定 (サンプル)。初回起動時にコピーされ、以降は設定画面の「全体設定」から変更できる
+
+default_profile = "desktop"        # どの match にも当てはまらないアプリで使うプロファイル
+pad = -1                           # XInput のスロット番号 (0〜3)。-1 は最初に見つかったコントローラー
+poll_hz = 500                      # 1 秒あたりの読み取り回数
+focus_interval = 0.2               # 前面アプリを確認する間隔 (秒)
+mouse_mode = "cursor"              # cursor: カーソル位置を直接動かす / relative: マウス移動として送る
+start_enabled = true               # 起動直後から変換を有効にするか
+toggle_combo = ["BACK", "START"]   # 同時に長押しすると変換の有効/無効を切り替える
+toggle_hold = 1.0                  # 長押しの秒数
